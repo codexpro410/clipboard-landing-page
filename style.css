@@ -1,0 +1,186 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Bai Jamjuree', sans-serif;
+    Font-size: 18px;
+    --prim1:hsl(171, 66%, 44%);
+    --prim2:hsl(233, 100%, 69%);
+    --nat1:hsl(210, 10%, 33%);
+    --nat2: hsl(201, 11%, 66%);
+    --white:hsl(0, 0%, 100%);
+}
+html, body{
+    margin: 0;
+}
+body{
+    background-image: url("images/bg-header-desktop.png");
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+ } 
+main{
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+section{
+    padding-bottom: 10%;
+}
+section:not(.sec2, .sec4,.sec5){
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+.sec2{
+    display: flex;
+    width: 800px;
+    text-align: left;
+}
+.sec2 img{
+    height: 400px;
+    width: 50%;
+}
+.sec2 .container{
+    padding-left: 10%;
+    width: 100%;
+}
+.sec3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.sec3 img{
+    max-width: 100%;
+    max-height: 100%;
+}
+button{
+    border-radius: 25px;
+    border: none;
+    text-align: center;
+    padding: 15px 25px;
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+}
+.btn1{
+    background: var(--prim1);
+}
+.btn1:hover{
+    box-shadow: 0px 0px 20px rgb(8, 218, 8);
+    transition: 0.1s ease-in-out;
+    background:hsla(170, 75%, 39%, 0.801);
+}
+.btn2{
+    background: var(--prim2);
+}
+.btn2:hover{
+    box-shadow: 0px 0px 20px hsla(233, 100%, 70%, 0.959);
+    transition: 0.1s ease-in-out;
+    background:hsla(233, 100%, 70%, 0.959);
+}
+.sec4 .container, .sec5 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+.sec4 .container div{
+    flex-basis: 100%;
+}
+.sec5{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nat2);
+    width: 100%;
+    padding: 0 25%;
+}
+.logo img{
+    height: 80px;
+    width: 80px;
+}
+footer .text{
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .text p{
+    flex:1 2 25%;
+    margin: 5px;
+    justify-content: flex-start;
+}
+footer .awesome img{
+    margin-left: 10px;
+}
+footer .text p:hover{
+    color:hsl(170, 100%, 49%);
+    cursor: pointer;
+}
+footer .awesome img:hover{
+    filter: opacity(0.5) drop-shadow(0 0 0 hsl(170, 100%, 49%));
+    cursor: pointer;
+}
+@media (max-width:375px){
+     body, main,section,footer{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .sec1{
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    button{
+        display: block;
+        width: 70%;
+        margin: 15px auto;
+
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    p{
+        width: 50%;
+        text-align: center;
+        margin: auto;
+    }
+    .sec5 img{
+        margin: 40px 0;
+    }
+    footer{
+        display: flex;
+        flex-direction: column ;
+        background-color: rgb(223, 226, 225);
+        text-align: center;
+        margin: auto;
+        flex-basis: 100%;
+    }
+    footer .text{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .awesome{
+        padding: 0 30px;
+        font-size: 20px;
+    }
+}  
